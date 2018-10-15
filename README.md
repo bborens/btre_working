@@ -116,4 +116,17 @@ class Listing(models.Model):
                     {% endblock %}
 
     # Customizing Admin Display Data
-    
+                    
+                $   class RealtorAdmin(admin.ModelAdmin):
+                    list_display = ('id', 'name', 'email', 'hire_date')
+                    list_display_links = ('id', 'name')
+                    search_fields = ('name',)
+                    lists_per_page = 25
+
+                $   class ListingAdmin(admin.ModelAdmin):
+                    list_display = ('id', 'title', 'is_published', 'price', 'list_date', 'realtor')
+                    list_display_links = ('id', 'title')
+                    list_filter = ('realtor',)
+                    list_editable = ('is_published',)
+                    search_fields = ('title', 'description', 'address', 'city', 'state', 'zipcode', 'price')
+                    list_per_page = 25

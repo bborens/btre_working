@@ -131,3 +131,6 @@ class Listing(models.Model):
                     search_fields = ('title', 'description', 'address', 'city', 'state', 'zipcode', 'price')
                     list_per_page = 25
 
+Create accounts app
+
+(venv) kde-bot@kde-bot-MS-7751:~/dev/btre_app$ python manage.py startapp accounts

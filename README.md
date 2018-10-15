@@ -130,3 +130,4 @@ class Listing(models.Model):
                     list_editable = ('is_published',)
                     search_fields = ('title', 'description', 'address', 'city', 'state', 'zipcode', 'price')
                     list_per_page = 25
+
